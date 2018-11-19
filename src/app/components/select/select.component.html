@@ -1,3 +1,17 @@
-<p>
-  select works!
-</p>
+<div class="row">
+<div class="col-md-3">
+  <select name="perfix" [(ngModel)]="a" (change)="changProvinces()" class="form-control">
+      <option *ngFor="let val of provinces" [ngValue]="val.id" >{{val.text}}</option>
+  </select>
+</div>
+<div class="col-md-3">
+  <select name="perfix" [(ngModel)]="b" (change)="changProvinces2()" class="form-control">
+      <option *ngFor="let val of provinces2" [ngValue]="val.id" >{{val.text}}</option>
+  </select>
+</div>
+<div class="col-md-3">
+  <select name="perfix" [(ngModel)]="c" class="form-control">
+      <option *ngFor="let val of provinces3" [ngValue]="val.id" >{{val.text}}</option>
+  </select>
+</div>
+</div>

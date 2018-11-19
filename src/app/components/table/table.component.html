@@ -1,6 +1,6 @@
 
 <div>
-    <button type="button" (click)="addData()"  class="btn">เพิ่ม</button>
+    <button type="button" (click)="addData()" class="btn btn-primary">เพิ่ม</button>
 </div>
 <table>
   <tr>
@@ -10,15 +10,15 @@
   </tr>
   <tr *ngFor="let table of tables; let i = index">
     <td>
-      <select name="perfix" [(ngModel)]="table.prefix">
+      <select name="perfix" [(ngModel)]="table.prefix" class="form-control">
         <option *ngFor="let val of prefix" [ngValue]="val" >{{val}}</option>
       </select>
     </td>
     <td>
-        <input type="text" name="name" [(ngModel)]="table.name">
+        <input type="text" name="name" [(ngModel)]="table.name" class="form-control">
     </td>
     <td>
-        <input type="text" name="sername" [(ngModel)]="table.sername">
+        <input type="text" name="sername" [(ngModel)]="table.sername" class="form-control">
     </td>
     <td>
         <button type="button" (click)="delData(i)">ลบ</button>
