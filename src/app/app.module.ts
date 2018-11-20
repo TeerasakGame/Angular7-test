@@ -8,8 +8,10 @@ import { SelectComponent } from './components/select/select.component';
 import { FormsModule } from '@angular/forms';
 import { NgSelect2Module } from 'ng-select2';
 import { LayoutModule } from 'angular-admin-lte';    //Loading layout module
-import { BoxModule } from 'angular-admin-lte';       //Box component
+import { BoxModule } from 'angular-admin-lte';
+import { AutoCompleteComponent } from './components/auto-complete/auto-complete.component';       //Box component
 //import { adminLteConf } from './admin-lte.conf';   //Import the layout configuration.
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { BoxModule } from 'angular-admin-lte';       //Box component
     AppComponent,
     TableComponent,
     SelectComponent,
+    AutoCompleteComponent,
+
   //  LayoutModule.forRoot(adminLteConf),
   ],
   imports: [
@@ -25,7 +29,8 @@ import { BoxModule } from 'angular-admin-lte';       //Box component
     FormsModule,
     NgSelect2Module,
     LayoutModule,
-    BoxModule
+    BoxModule,
+    NgSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent,TableComponent]
