@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./auto-complete.component.css']
 })
 export class AutoCompleteComponent implements OnInit {
-  public.items:any;
-  constructor() { }
+  public items: any;
+  constructor() {
+  }
 
   ngOnInit() {
     this.items = [true, 'Two', 3];
